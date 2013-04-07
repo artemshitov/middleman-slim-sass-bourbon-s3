@@ -80,6 +80,11 @@ configure :build do
   # set :http_path, "/Content/images/"
 end
 
+activate :fjords do |fjords|
+  fjords.username = "YOUR_FJORDS_USERNAME"
+  fjords.password = "YOUR_FJORDS_PASSWORD"
+end
+
 activate :sync do |sync|
   sync.fog_provider = "AWS" # Your storage provider
   sync.fog_directory = "" # Your bucket name
